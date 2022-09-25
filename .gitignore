@@ -1,0 +1,5 @@
+/.mypy_cache/
+/.idea
+/venv
+/.git
+/__pycache__
