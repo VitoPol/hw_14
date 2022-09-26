@@ -29,13 +29,13 @@ def execute_query(logs_lines: Iterator, query: str, param: str) -> Iterator:
     if query == "filter":
         return filter(lambda s: param in s, logs_lines)
     elif query == "map":
-        return Query.q_map(logs_lines, param)
+        return q_map(logs_lines, param)
     elif query == "unique" and param == "-":
-        return Query.q_unique(logs_lines)
+        return q_unique(logs_lines)
     elif query == "sort":
-        return  Query.q_sort(logs_lines, param)
+        return q_sort(logs_lines, param)
     elif query == "limit":
-        return Query.q_limit(logs_lines, param)
+        return q_limit(logs_lines, param)
     else:
         return logs_lines
 
